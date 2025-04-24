@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>حظر مشدد - WhatsApp Block Remover</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00695c;
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 17px;
+      color: #004d40;
+    }
+
+    textarea {
+      width: 100%;
+      height: 110px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      resize: none;
+      font-size: 15px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      background-color: #004d40;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>حظر مشدد</h1>
+
+    <div class="section">
+      <label for="emails">📧 الجميلات:</label>
+      <textarea id="emails">smb@support.whatsapp.com, support@support.whatsapp.com, android@whatsapp.com, iphone_web@support.whatsapp.com, press@whatsapp.com, webclient_web@support.whatsapp.com, android_web@support.whatsapp.com, android@support.whatsapp.com, jan@whatsapp.com, iphone@whatsapp.com</textarea>
+      <button class="copy-btn" onclick="copyText('emails')">📋 نسخ الإيميلات</button>
+    </div>
+
+    <div class="section">
+      <label for="subject">📝 الموضوع:</label>
+      <textarea id="subject">I'm having a problem with a delay in receiving messages in groups</textarea>
+      <button class="copy-btn" onclick="copyText('subject')">📋 نسخ الموضوع</button>
+    </div>
+
+    <div class="section">
+      <label for="message">📨 الرسالة:</label>
+      <textarea id="message">I'm having a problem with a delay in receiving messages in groups</textarea>
+      <button class="copy-btn" onclick="copyText('message')">📋 نسخ الرسالة</button>
+    </div>
+
+    <div class="section">
+      <label for="response">✅ الرد اللي تبعته بعد ما يردوا عليك:</label>
+      <textarea id="response">Hello dear WhatsApp Support, I am Joseph Michael from Germany and I am communicating with you today regarding my WhatsApp account. Your system has suspected me and therefore my phone number has been blocked from using WhatsApp and I do not know why this was done to me. I was using WhatsApp to message my family and complete my work through it and when I contacted you A previous time, my message was answered. Our system monitored that your account activity violates the terms of service, and your account will remain banned. I know the terms of service and WhatsApp policy well, and I did not do anything to be banned from using WhatsApp. If you think that I am using the unofficial WhatsApp and modified by Jailbreak, I will tell you this. Error: I am using the official WhatsApp with the latest version on Google Play, and I cannot use a modified WhatsApp. I also cannot add people to WhatsApp groups, and I am not in their contacts. I cannot violate the terms of service in any way, because the WhatsApp application is very important to my life, and I cannot Doing something that harms WhatsApp or harms WhatsApp users. I have been using WhatsApp since 2015, and I know that the WhatsApp system is good and cannot fail a WhatsApp user if he asks for help. I am now asking for help in unblocking my number, and I will use WhatsApp as an administrator, and if your system detects that it has blocked my account by mistake, you must search. I have an acceptable excuse for this error that came from your system, and I want you to review my previous account activity from my chat backup to ensure that I did not violate the terms of service earlier or sooner, and I hope to solve this problem as soon as possible because I want to communicate with my family and communicate in my work, and I apologize. For any confusion or inconvenience, thank you. This is my phone number (+20)</textarea>
+      <button class="copy-btn" onclick="copyText('response')">📋 نسخ الرد النهائي</button>
+    </div>
+
+    <div class="footer">
+      تم التصميم بواسطة Yousef Magdy
+    </div>
+  </div>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id);
+      text.select();
+      document.execCommand("copy");
+      alert("✔ تم النسخ!");
+    }
+  </script>
+</body>
+</html>

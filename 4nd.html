@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فك طعن - WhatsApp Block Remover</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #e1f5fe, #ffffff);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #006064;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #004d40;
+    }
+
+    textarea {
+      width: 100%;
+      height: 110px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      resize: none;
+      font-size: 15px;
+      background-color: #f9f9f9;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      background-color: #004d40;
+    }
+
+    .back-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-btn a {
+      text-decoration: none;
+      background-color: #004d40;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-size: 16px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn a:hover {
+      background-color: #002f2b;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #888;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>فك تخمين</h1>
+
+    <div class="section">
+      <label for="emails">📧 الجميلات 👇🏼✨</label>
+      <textarea id="emails">smb@support.whatsapp.com, support@support.whatsapp.com, android@whatsapp.com, iphone_web@support.whatsapp.com, press@whatsapp.com, webclient_web@support.whatsapp.com, android_web@support.whatsapp.com, android@support.whatsapp.com, jan@whatsapp.com, iphone@whatsapp.com</textarea>
+      <button class="copy-btn" onclick="copyText('emails')">📋 نسخ الإيميلات</button>
+    </div>
+
+    <div class="section">
+      <label for="subject">📝 الموضوع 👇🏼✨</label>
+      <textarea id="subject">
+        À propos du déverrouillage du code de mon compte WhatsApp</textarea>
+      <button class="copy-btn" onclick="copyText('subject')">📋 نسخ الموضوع</button>
+    </div>
+
+    <div class="section">
+      <label for="message">📨 الرسالة 👇🏼✨</label>
+      <textarea id="message">
+        Je suis Ahmed Elkabos et je vous appelle parce que je ne peux pas accéder à mon compte WhatsApp. Quelqu'un a deviné mon code de vérification et je ne peux pas récupérer mon compte. C'est pourquoi l'un des pirates malveillants dans mon travail sur WhatsApp, parce que j'aide beaucoup de gens pauvres et que je répands le bonheur aux gens, s'est facilement débarrassé du code et je ne sais pas comment ils l'ont fait facilement. Pour empêcher l'accès depuis WhatsApp, j'ai demandé le code par SMS et également par appel. J'ai essayé beaucoup, mais je n'ai pas réussi à me connecter. Veuillez supprimer les suppositions de mon numéro pour vous reconnecter. C'est mon numéro [+20 ]  </textarea>
+      <button class="copy-btn" onclick="copyText('message')">📋 نسخ الرسالة</button>
+    </div>
+
+    <div class="back-btn">
+      <a href="index.html">← رجوع إلى التطبيق</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    تم التصميم بواسطة 💻 Yousef Magdy
+  </div>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id);
+      text.select();
+      text.setSelectionRange(0, 99999); // for mobile
+      document.execCommand("copy");
+      alert("✔ تم النسخ!");
+    }
+  </script>
+</body>
+</html>
